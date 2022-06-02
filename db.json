@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "username": "test1",
+      "email": "test1@gmail.com",
+      "mobile": 1010101011,
+      "salary": 11111
+    },
+    {
+      "id": 3,
+      "username": "test2",
+      "email": "test2@gmail",
+      "mobile": 222222222,
+      "salary": 22222
+    },
+    {
+      "id": 4,
+      "username": "test3",
+      "email": "test3@gmail",
+      "mobile": 4444444444,
+      "salary": 43732
+    },
+    {
+      "id": 5,
+      "username": "test5",
+      "email": "test5@gmail",
+      "mobile": 5555555555,
+      "salary": 55555
+    }
+  ],
+  "signedupUsers": [
+    {
+      "username": "test1",
+      "email": "test1@gmail",
+      "mobile": 1234567899,
+      "password": "test1",
+      "id": 1
+    },
+    {
+      "username": "vasu",
+      "email": "vasu@gmail.com",
+      "mobile": 9555290297,
+      "password": "vasu@1234",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

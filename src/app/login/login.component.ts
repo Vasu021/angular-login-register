@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms'
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap  } from '@angular/router';
+import { ShareIdService } from "../shared/share-id.service";
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,12 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginForm !: FormGroup;
-  constructor(private formBuilder: FormBuilder, private httpClient: HttpClient, private router: Router) { }
+  constructor(
+    private formBuilder: FormBuilder, 
+    private httpClient: HttpClient, 
+    private router: Router,
+    private shareId: ShareIdService
+    ) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -32,6 +38,7 @@ export class LoginComponent implements OnInit {
       if(user){
         alert("Login Success");
         this.loginForm.reset();
+        this.shareId.setId(user.id);
         this.router.navigate(['dashboard']);
       }
       else{
